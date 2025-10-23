@@ -1,0 +1,116 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+# Collected static files (remove if you commit built static files)
+staticfiles/
+# If you use a different collected static dir, add it instead
+
+# Keep migrations under source control; ignore pyc and cache inside them
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Sphinx documentation
+docs/_build/
+
+# Editors / IDEs
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Swap / temp files
+*~
+*.swp
+*.swo
+
+# dotenv / secrets
+.env
+.env.*.local
+secrets.json
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Gunicorn
+gunicorn.socket
+gunicorn.pid
+
+# Node / front-end
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Misc
+*.log
+*.tar.gz
+*.zip
