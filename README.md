@@ -109,7 +109,7 @@ ALLOWED_HOSTS=127.0.0.1,localhost
 Final Year B.Tech (Mechanical Engineering), **NIT Patna**  
 
 📧 **Email:** [anandjangid115@gmail.com]  
-💼 **LinkedIn:** [[https://www.linkedin.com/in/your-linkedin-profile/](https://www.linkedin.com/in/anandjan/)]  
+💼 **LinkedIn:** [https://www.linkedin.com/in/anandjan/]  
 🐙 **GitHub:** [https://github.com/Anand-115]
 
 
