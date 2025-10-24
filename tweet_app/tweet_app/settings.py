@@ -139,3 +139,9 @@ media_url = '/media/'
 media_root = os.path.join(BASE_DIR, 'media')
 
 NPM_BIN_PATH = r"C:\nvm4w\nodejs\npm.cmd"
+
+login_url = '/accounts/login/'
+
+login_redirect_url = '/tweet/'
+
+logout_redirect_url = '/tweet/'

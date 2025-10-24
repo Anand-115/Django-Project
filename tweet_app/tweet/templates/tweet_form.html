@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}Tweet Form{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-900 text-white flex items-center justify-center py-10 px-4">
+    <div class="w-full max-w-md bg-gray-800 rounded-2xl shadow-lg p-8 space-y-6">
+        <h2 class="text-2xl font-bold text-center text-yellow-400">
+            {% if form.instance.pk %}
+                Edit Tweet
+            {% else %}
+                Create Tweet
+            {% endif %}
+        </h2>
+
+        <form method="post" enctype="multipart/form-data" class="space-y-5">
+            {% csrf_token %}
+            
+            <div class="space-y-4">
+                {% for field in form %}
+                    <div>
+                        <label class="block text-sm font-medium mb-1 text-gray-300">{{ field.label }}</label>
+                        {{ field }}
+                        {% if field.errors %}
+                            <p class="text-red-400 text-sm mt-1">{{ field.errors|striptags }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button 
+                    class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold py-2 px-5 rounded-lg shadow transition-all duration-200"
+                    type="submit">
+                    {% if form.instance.pk %}Update{% else %}Create{% endif %}
+                </button>
+                <a href="{% url 'tweet_details' %}" 
+                   class="text-gray-400 hover:text-yellow-400 transition">
+                    ← Back to Tweets
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

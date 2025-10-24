@@ -1,0 +1,54 @@
+{% extends "layout.html" %} 
+
+{% block title %}
+    Tweet Home Page
+{% endblock %} 
+
+{% block content %}
+  <header class="max-w-5xl mx-auto px-4 py-4 flex items-center">
+    <a href="{% url 'tweet_create' %}"
+       class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded shadow">
+      Create a tweet
+    </a>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pb-12">
+    <!-- Grid: 1 column on small screens, 2 on md, 3 on lg -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for tweet in tweets %}
+      <article class="bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+        <!-- Image: show only if exists, otherwise show placeholder -->
+        {% if tweet.photo %}
+        <div class="w-full h-64 overflow-hidden">
+          <img src="{{ tweet.photo.url }}"
+               alt="tweet photo"
+               class="w-full h-full object-cover block" />
+        </div>
+        {% else %}
+        <div class="h-64 w-full bg-gray-800 flex items-center justify-center text-gray-400">
+          <span class="text-sm">No image</span>
+        </div>
+        {% endif %}
+
+        <div class="p-4">
+          <h2 class="text-white text-lg font-semibold mb-1">{{ tweet.user.username }}</h2>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">{{ tweet.content }}</p>
+          {% if tweet.user == user %}
+          <div class="flex gap-3 justify-end">
+            <a href="{% url 'tweet_edit' tweet.id %}"
+               class="inline-flex items-center justify-center px-3 py-1.5 border border-transparent rounded text-sm font-medium bg-violet-600 hover:bg-violet-700 text-white">
+              Edit
+            </a>
+
+            <a href="{% url 'tweet_delete' tweet.id %}"
+               class="inline-flex items-center justify-center px-3 py-1.5 rounded text-sm font-medium bg-yellow-400 hover:bg-yellow-500 text-gray-900">
+              Delete
+            </a>
+          </div>
+            {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}
