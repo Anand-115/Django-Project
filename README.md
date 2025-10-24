@@ -37,7 +37,7 @@ This project demonstrates **end-to-end web development** — from backend databa
 
 ## 📁 Project Structure
 
-
+```markdown
 tweet_app/
 ├── tweet/                     # Main app for handling tweet CRUD operations
 │   ├── migrations/              # Database migrations
@@ -65,7 +65,7 @@ tweet_app/
 ├── manage.py                    # Django management script
 ├── requirements.txt             # Project dependencies
 └── README.md                    # Project documentation
-
+```
 
 ### 1️⃣ Clone the repository
 git clone https://github.com/yourusername/twitter-clone-django.git
