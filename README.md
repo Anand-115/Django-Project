@@ -68,27 +68,49 @@ tweet_app/
 ```
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/yourusername/twitter-clone-django.git
+```bash
+git https://github.com/Anand-115/Django-Project.git
 cd twitter-clone-django
+```
 
 ### 2️⃣ Create and activate a virtual environment
+```bash
 python -m venv venv
 venv\Scripts\activate        # On Windows
 # source venv/bin/activate   # On macOS/Linux
+```
 
 ### 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 4️⃣ Apply migrations and create a superuser
+```bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 ### 5️⃣ Run the development server
+```bash
 python manage.py runserver
+```
 
 ### You can store sensitive information in a .env file:
+```bash
 SECRET_KEY=your_secret_key
 ALLOWED_HOSTS=127.0.0.1,localhost
+```
+
+## 👨‍💻 Author
+
+**Anand**  
+Final Year B.Tech (Mechanical Engineering), **NIT Patna**  
+
+📧 **Email:** [anandjangid115@gmail.com]  
+💼 **LinkedIn:** [[https://www.linkedin.com/in/your-linkedin-profile/](https://www.linkedin.com/in/anandjan/)]  
+🐙 **GitHub:** [https://github.com/Anand-115]
+
 
 
